@@ -100,16 +100,35 @@ function appendVertices(){
   document.getElementById("frameForm").appendChild(table);
 }
 function plotArea(){
-  this.xVerts=[];
-  this.yVerts=[];
+  var xVerts=[];
+  var yVerts=[];
+  var dps=[];
 //TODO:Improve this logic
   for (var i=0;i < window.number_of_verticies;i++){
-    window.myLineChart.addData(["txt_x"+i,"txt_y"+i],"Test");
-   this.xVerts.push(getValues("txt_x"+i));
-   this.yVerts.push(getValues("txt_y"+i));
+   _x= parseInt(getValues("txt_x"+i));
+   _y=parseInt(getValues("txt_y"+i));
+   dps.push({x:_x,y:_y});
  }
-// this.xVerts=this.xVerts.sort(sortNumber);
-// this.yVerts=this.yVerts.sort(sortNumber);
+  console.log(dps);
+  var elements = document.getElementById("frameCanvas");
+  while (elements.firstChild){
+    elements.removeChild(elements.firstChild);
+  }
+  var cj_element = document.createElement('div');
+  cj_element.setAttribute('id','chartContainer');
+  cj_element.style.height="431";
+  cj_element.style.width="862";
+  document.getElementById("frameCanvas").appendChild(cj_element);
+  var chart = new CanvasJS.Chart("chartContainer",{
+    title:{
+      text:"Rasterization-Polygon"
+    },
+    data:[{
+      type:"splineArea",
+      dataPoints: dps
+    }]
+  });
+  chart.render();
  console.log(xVerts);
  console.log(yVerts);
 }
