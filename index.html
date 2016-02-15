@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Rasterization Polygon</title>
+    <link   rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/Chart.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript" src="js/polygon.js"></script>
+    <div id="frameCanvas" >
+      <canvas id="polyCanvas"></canvas>
+    </div>
+    <div  id="frameForm">
+      <br><br><br>
+	    <label for="txtFrameWidth" id="lblFrameWidth">Enter Frame Width  (max - 25):</label> <br>
+	    <input type="text" id="txtFrameWidth" name="frameWidth" placeholder="25" ><br> 
+	    <label for="txtFrameHeight" id="lblFrameHeight">Enter Frame Height (max - 30):</label><br>
+	    <input type="text" id="txtFrameHeight" name="frameHeight" placeholder="30"><br>
+	    <br><br>
+	    <input type="button" id="cmdEnter" value="Enter" onclick="startExperiment();" /><br><br>
+	    <input type="button" id="cmdDefault" value="Start Experimenet with Default Values" onclick="startExperiment();"/><br><br>   
+    </div>
+   </body>
+</html>
