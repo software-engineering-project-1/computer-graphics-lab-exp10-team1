@@ -1,25 +1,25 @@
 <html>
   <head>
     <title>Rasterization Polygon</title>
-    <link   rel="stylesheet" type="text/css" href="css/stylesheet.css">
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="js/Chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/canvasjs.min.js"></script>
   </head>
   <body>
     <script type="text/javascript" src="js/polygon.js"></script>
-    <div id="frameCanvas" >
-      <canvas id="polyCanvas"></canvas>
+    <div id="divCanvas">
     </div>
-    <div  id="frameForm">
-      <br><br><br>
-	    <label for="txtFrameWidth" id="lblFrameWidth">Enter Frame Width  (max - 25):</label> <br>
-	    <input type="text" id="txtFrameWidth" name="frameWidth" placeholder="25" ><br> 
-	    <label for="txtFrameHeight" id="lblFrameHeight">Enter Frame Height (max - 30):</label><br>
-	    <input type="text" id="txtFrameHeight" name="frameHeight" placeholder="30"><br>
+    <br><br><br><br>
+    <div  id="divForm" class="form-group">
+	    <label for ="txtFrameWidth" id="lblFrameWidth" class="control-label">Enter Frame Width  (0 - 25) :</label>
+	    <input type="text" id="txtFrameWidth"  class="form-control" placeholder="25" onkeypress="return isNumber(event);"><br> 
+	    <label for="txtFrameHeight" id="lblFrameHeight" class="control-label">Enter Frame Height (0 - 25) :</label>
+	    <input type="text" id="txtFrameHeight" class="form-control" placeholder="25" onkeypress="return isNumber(event);"><br>
 	    <br><br>
-	    <input type="button" id="cmdEnter" value="Enter" onclick="startExperiment();" /><br><br>
-	    <input type="button" id="cmdDefault" value="Start Experimenet with Default Values" onclick="startExperiment();"/><br><br>   
+	    <input type="button" id="cmdEnter" class="btn btn-primary btn-block" value="Enter"  onclick="startExperiment();" /><br><br>
+	    <input type="button" id="cmdDefault" class="btn btn-default btn-block" value="Start Experimenet with Default Values" onclick="startExperiment();"/><br><br>   
     </div>
    </body>
 </html>

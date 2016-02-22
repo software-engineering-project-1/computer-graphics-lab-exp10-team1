@@ -10,21 +10,40 @@ html, body {
     margin: 0px;
 }
 
-#frameCanvas{
+#divCanvas{
 float:left;
-width:70%;
+width:75%;
+height:auto;
 overflow:hidden;
 padding-left: 10px
 }
-#frameForm{
+#chartContainer{
+height: 95%;
+float: left;
+width: 99%;
+}
+#divForm{
 float:right;
 width:25%;
 overflow:hidden;
+padding-right: 10px;
 }
 
 td {
-	padding:0 10px 010px;
+	padding:0 10px 015px;
 }
-table td {
-	min-width: 20px;
+tbody:before{
+	line-height: 2em;
+}
+table  {
+	min-width: 15px;
+	padding: 0px;
+	width: 90%;
+	cellspacing: 5px; 
+}
+btn-default{
+	border-radius: 0;
+}
+input[type="number"] {
+	width: 75px;
 }
